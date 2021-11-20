@@ -1,0 +1,42 @@
+import { StyleSheet } from 'react-native'
+
+export const styles = StyleSheet.create({
+    inputBox:{
+        flexDirection:"row",
+        justifyContent:"space-between",
+        padding:10,
+        backgroundColor:"#e7e7e7",
+        margin:10,
+        alignItems:"center"
+    },
+    title:{
+        fontWeight:"600",
+        fontSize:20,
+        color:"#434343"
+    },
+    time:{
+        flexDirection:"row",
+        justifyContent:"space-between",
+        width:100,
+        padding:10,
+        backgroundColor:"white",
+        borderRadius:50,
+        alignItems:"center"
+    },
+    row:{
+        flexDirection:"row",
+        padding:20,
+        borderBottomWidth:1,
+        borderColor:"#dbdbdb",
+        alignItems:"center"
+    },
+    destinationText:{
+        marginLeft:10,
+        fontWeight:"500",
+        fontSize:16
+    },iconContainer:{
+        padding:10,
+        borderRadius:25,
+        backgroundColor:"#b3b3b3"
+    }
+})
