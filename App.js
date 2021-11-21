@@ -7,24 +7,17 @@
  */
 
 import React from 'react';
-import {
-  StatusBar
-} from 'react-native';
+import {StatusBar} from 'react-native';
 import Home from './src/screens/HomeScreen/Home';
 import Search from './src/screens/SearchScreen/Search';
 
-
-
 const App = () => {
-
   return (
     <>
-      <StatusBar barStyle='light-content' />
-      <Search/>
+      <StatusBar barStyle="light-content" />
+      <Search />
     </>
   );
 };
-
-
 
 export default App;

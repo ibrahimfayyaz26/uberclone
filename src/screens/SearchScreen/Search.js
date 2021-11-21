@@ -1,41 +1,42 @@
-import React,{useState} from 'react'
-import { View, Text, TextInput, SafeAreaView } from 'react-native'
-import { styles } from './styles'
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-
+import React, {useState} from 'react';
+import {View, Text, TextInput, SafeAreaView} from 'react-native';
+import {styles} from './styles';
+import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 
 const Search = () => {
-    const [from, setFrom] = useState("");
-    const [to, setTo] = useState("");
+  const [from, setFrom] = useState('');
+  const [to, setTo] = useState('');
 
-    return (
-        <SafeAreaView>
-        <View style={styles.container} >
-            <TextInput 
-               style={styles.input} 
-               value={from} 
-               onChangeText={setFrom} 
-               placeholder="Current Location"/>
-            <TextInput 
-            style={styles.input}
-            value={to} 
-            onChangeText={setTo} 
-            placeholder="Where to?"/>
-             <GooglePlacesAutocomplete
-              placeholder='Search'
-              fetchDetails = {true}
-              onPress={(data, details = null) => {
-           // 'details' is provided when fetchDetails = true
-             console.log(data, details);
-              }}
-              query={{
-                key: 'AIzaSyA1Bsldc-hQYyf7KKIq-SiMNrnRpQus3pU',
-                language: 'en',
-                }}
-            />
-        </View>
-        </SafeAreaView>
-    )
-}
+  return (
+    <SafeAreaView>
+      <View style={styles.container}>
+      <GooglePlacesAutocomplete
+          placeholder="Current Location"
+          styles={{textInput: styles.input}}
+          fetchDetails={true}
+          onPress={(data, details = null) => {
+            setFrom({data, details});
+          }}
+          query={{
+            key: 'AIzaSyCDne5x8Fpe2vehQ9H-ssWUi9R9nzopbgE',
+            language: 'en',
+          }}
+        />
+        <GooglePlacesAutocomplete
+          placeholder="Where to?"
+          styles={{textInput: styles.input}}
+          fetchDetails={true}
+          onPress={(data, details = null) => {
+            setTo({data, details});
+          }}
+          query={{
+            key: 'AIzaSyCDne5x8Fpe2vehQ9H-ssWUi9R9nzopbgE',
+            language: 'en',
+          }}
+        />
+      </View>
+    </SafeAreaView>
+  );
+};
 
-export default Search
+export default Search;
