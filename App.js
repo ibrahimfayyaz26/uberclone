@@ -11,6 +11,7 @@ import {
   StatusBar
 } from 'react-native';
 import Home from './src/screens/HomeScreen/Home';
+import Search from './src/screens/SearchScreen/Search';
 
 
 
@@ -19,7 +20,7 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle='light-content' />
-      <Home/>
+      <Search/>
     </>
   );
 };
