@@ -9,13 +9,14 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
 import Home from './src/screens/HomeScreen/Home';
+import SearchResult from './src/screens/SearchResultScreen/SearchResult';
 import Search from './src/screens/SearchScreen/Search';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <Search />
+      <SearchResult />
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {View, Text, TextInput, SafeAreaView} from 'react-native';
 import {styles} from './styles';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
@@ -6,6 +6,12 @@ import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete'
 const Search = () => {
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
+
+  useEffect(() => {
+     if(from && to){
+         console.warn("navigate")
+     }
+  }, [from,to])
 
   return (
     <SafeAreaView>
