@@ -22,7 +22,7 @@ const HomeMap = () => {
       initialRegion={{
         latitude: 28.450627,
         longitude: -16.263045,
-        latitudeDelta: 0.0922,
+        latitudeDelta: 0.0222,
         longitudeDelta: 0.0421,
       }}>
       {cars.map(car => (
