@@ -15,8 +15,8 @@ import Search from './src/screens/SearchScreen/Search';
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="light-content" />
-      <SearchResult />
+      <StatusBar barStyle="default" />
+      <Search />
     </>
   );
 };
